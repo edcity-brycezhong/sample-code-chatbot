@@ -103,7 +103,6 @@ class ShoppingDialog extends ComponentDialog {
     }
 
     async validateAction(promptContext) {
-        
         // verify the user input contains the action
         let action; 
         for (let i=0; i<SHOPPING_ACTION_KEYWORD.length; i++) {
@@ -153,14 +152,20 @@ class ShoppingDialog extends ComponentDialog {
         // save the valid action to shoppingProperty state 
         let action; 
         if (shoppingProperty.action) {
-            action = shoppingProperty.action;
+            for (let i=0; i<SHOPPING_ACTION_KEYWORD.length; i++) {
+                if (shoppingProperty.action.includes(SHOPPING_ACTION_KEYWORD[i])) {
+                        action = SHOPPING_ACTION_KEYWORD[i];
+                }
+            }
         } else {
             for (let i=0; i<SHOPPING_ACTION_KEYWORD.length; i++) {
                 if (step.result.includes(SHOPPING_ACTION_KEYWORD[i])) {
-                    action = SHOPPING_ACTION_KEYWORD[i];
+                        action = SHOPPING_ACTION_KEYWORD[i];
                 }
             }
         }
+
+
         shoppingProperty.action = action;
         await this.shoppingPropertyAccessor.set(step.context, shoppingProperty);
 
@@ -199,7 +204,6 @@ class ShoppingDialog extends ComponentDialog {
     }
 
     async validateItem(promptContext) {
-        
         let item;
         for (let i=0; i<SHOPPING_ITEM_KEYWORD.length; i++) {
             if (promptContext.recognized.value.includes(SHOPPING_ITEM_KEYWORD[i])) {

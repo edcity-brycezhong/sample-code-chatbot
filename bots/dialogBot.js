@@ -78,10 +78,10 @@ class DialogBot extends ActivityHandler {
             await dialogContext.cancelAllDialogs();
             await this.directedToCorrespondentDialog(dialogContext, latestOptionList);
         } else if (this.isUserInputContainsOptionInShoppingDialog(userInput) === true) {
-            await this.setShoppingPropertyBasedOnUserInput(dialogContext);
             if (activeDialog === SHOPPING_MAIN_DIALOG_ID) {
                 await dialogContext.continueDialog();
             } else {
+                await this.setShoppingPropertyBasedOnUserInput(dialogContext);
                 await dialogContext.beginDialog(SHOPPING_MAIN_DIALOG_ID);
             }
         } else {
@@ -99,6 +99,7 @@ class DialogBot extends ActivityHandler {
             this.entity = null;
             this.intent = null;
         }
+
     }
 
     isUserInputContainsTheOptionInOptionList(userInput, latestOptionList) {
