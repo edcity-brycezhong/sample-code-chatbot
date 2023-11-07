@@ -1,0 +1,81 @@
+{
+    "SHOPPING_DIALOG" : "shoppingDialog",
+    "SHOPPING_ACTION_PROMPT" : "shoppingActionPrompt",
+    "SHOPPING_ACTION_LIST" : [
+            "How to buy items?",
+            "How to change or place items?",
+            "How to retrieve item?",
+            "How to sell items?"
+    ],
+
+
+    "SHOPPING_ACTION_OPTIONS_LIST_FOR_MAKING_CARD": [
+        {
+            "type": "Action.Submit",
+            "title": "How to buy items?",
+            "data": "How to buy items?"
+        },
+        {
+            "type": "Action.Submit",
+            "title": "How to change or place items?",
+            "data": "How to change or place items?"
+        },
+        {
+            "type": "Action.Submit",
+            "title": "How to retrieve item?",
+            "data": "How to retrieve item?"
+        },
+        {
+            "type": "Action.Submit",
+            "title": "How to sell items?",
+            "data": "How to sell items?"
+        }
+    ],
+
+    "SHOPPING_ACTION_BUY" : "buy",
+    "SHOPPING_ACTION_CHANGE" : "change",
+    "SHOPPING_ACTION_RETRIEVE" : "retrieve",
+    "SHOPPING_ACTION_SELL" : "sell",
+    "SHOPPING_ACTION_KEYWORD" : [
+        "buy",
+        "sell",
+        "change",
+        "retrieve"
+    ],
+
+    "SHOPPING_ITEM_PROMPT" : "shoppingItemPrompt",
+    "SHOPPING_BUY_ITEM_TEXT" : "Which item you want to buy?",
+    "SHOPPING_CHANGE_ITEM_TEXT" : "Which item you want to change or place?",
+    "SHOPPING_ITEM_LIST" : [
+            "Clothes",
+            "Accessories",
+            "Furniture"
+    ],
+
+
+    "SHOPPING_ITEM_CLOTHES": "Clothes",
+    "SHOPPING_ITEM_ACCESS": "Accessories",
+    "SHOPPING_ITEM_FURNITURE": "Furniture",
+    "SHOPPING_ITEM_KEYWORD" : [
+        "Clothes",
+        "Accessories",
+        "Furniture"
+    ],
+    "SHOPPING_ITEM_OPTIONS_LIST_FOR_MAKING_CARD": [
+        {
+            "type": "Action.Submit",
+            "title": "Clothes",
+            "data": "Clothes"
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Accessories",
+            "data": "Accessories"
+        },
+        {
+            "type": "Action.Submit",
+            "title": "Furniture",
+            "data": "Furniture"
+        }
+    ]
+}

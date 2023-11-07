@@ -1,0 +1,39 @@
+{
+    "MAPPING": {
+            
+        "About shopping": {
+            "entity":   "Shopping",
+            "intent":   null
+        },
+        "How to buy items?": {
+            "entity": "buy",
+            "intent": null
+        }, 
+        "How to change or place items?": {
+            "entity": "change",
+            "intent": null
+        },
+        "How to retrieve item?": {
+            "entity": "retrieve",
+            "intent": "RetrieveOrMoveFurniture"
+        },
+        "How to sell items?": {
+            "entity": "sell",
+            "intent": "SellingFurniture"
+        },
+
+        "Clothes": {
+            "entity": "Clothes",
+            "intent": null
+        },
+        "Accessories": {
+            "entity": "Accessories",
+            "intent": null
+        },
+        "Furniture": {
+            "entity": "Furniture",
+            "intent": null
+        }
+    }
+
+}
